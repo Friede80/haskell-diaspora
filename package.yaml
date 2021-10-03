@@ -1,0 +1,81 @@
+name:                haskell-diaspora
+version:             0.1.0.0
+github:              "Friede80/haskell-diaspora"
+license:             BSD3
+author:              "Matt Friede"
+maintainer:          "friede80@gmail.com"
+copyright:           "2021 Matt Friede"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+description: Please see the README on GitHub at <https://github.com/Friede80/haskell-diaspora#readme>
+
+dependencies:
+- base
+- relude
+
+ghc-options: 
+- -Wall
+- -Wmissing-deriving-strategies
+- -Wcompat
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wredundant-constraints
+
+executables:
+  haskell-diaspora-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - aeson
+    - lens
+    - lens-aeson
+    - shake
+    - slick
+    - text
+    - time
+    - unordered-containers
+
+default-extensions:
+- NoImplicitPrelude
+- BangPatterns
+- ConstraintKinds
+- DataKinds
+- DefaultSignatures
+- DeriveAnyClass
+- DeriveFoldable
+- DeriveFunctor
+- DeriveGeneric
+- DeriveLift
+- DeriveTraversable
+- DerivingStrategies
+- EmptyCase
+- ExistentialQuantification
+- FlexibleContexts
+- FlexibleInstances
+- FunctionalDependencies
+- GADTs
+- GeneralizedNewtypeDeriving
+- InstanceSigs
+- KindSignatures
+- LambdaCase
+- MultiParamTypeClasses
+- MultiWayIf
+- NamedFieldPuns
+- OverloadedStrings
+- PatternSynonyms
+- RankNTypes
+- ScopedTypeVariables
+- StandaloneDeriving
+- TupleSections
+- TypeApplications
+- TypeFamilies
+- TypeFamilyDependencies
+- TypeOperators
+- UndecidableInstances
